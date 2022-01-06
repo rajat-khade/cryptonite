@@ -1,0 +1,37 @@
+{
+  "name": "cryptochain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll",
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev-peer-server": "cross-env GENERATE_PEER_PORT='true' nodemon index.js",
+    "dev-peer": "concurrently \"npm run dev-peer-server\" \"npm start\""
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "author": "rajat",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.1.0",
+    "cross-env": "^7.0.3",
+    "env": "0.0.2",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.6.0",
+    "elliptic": "^6.5.4",
+    "express": "^4.17.1",
+    "hex-to-binary": "^1.0.1",
+    "pubnub": "^4.32.0",
+    "react-bootstrap": "^1.6.0",
+    "request": "^2.88.2",
+    "uuid": "^8.3.2"
+  }
+}
